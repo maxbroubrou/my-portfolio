@@ -1,0 +1,8 @@
+DONE:
+- Find a solution to place objects on the sphere surface (and deform object to fit the curved sphere surface)
+
+TO DO:
+- on mouseover object (like the pool) : fix the planet and make appear a dynamic text
+- on mouseout object : make the planet rotate again and remove the text
+- Add other object like smart lock, mobile tinsel, satellite, rowing, B92, Bouygues Telecom, ... 
+- prepare text for each object
