@@ -82,9 +82,9 @@ scene.add( arrowHelperZ );
 
 
 //Pool table
-loader.load('./objects/pool_table/billiard_table.glb', function ( gltf ) {
+loader.load('./objects/pool_table/pool_table_set.glb', function ( gltf ) {
   let pool = gltf.scene;  // pool 3D object is loaded
-  pool.scale.set(3, 3, 3);
+  pool.scale.set(0.0001, 0.0001, 0.0001);
   let i=5
   let l=10
   const phi = Math.acos( - 1 + ( 2 * i ) / l );
@@ -119,13 +119,257 @@ loader.load('./objects/pool_table/billiard_table.glb', function ( gltf ) {
 	console.error( error );
 } );
 
+//Smart Lock
+loader.load('./objects/smart_lock/Red_Smartphone.glb', function ( gltf ) {
+  let smartphone = gltf.scene;  // smartphone 3D object is loaded
+  smartphone.scale.set(3,3,3);
+  // smartphone.scale.set(0.0001, 0.0001, 0.0001);
+  let i=7.2
+  let l=10
+  const phi = Math.acos( - 1 + ( 2 * i ) / l );
+  const theta = Math.sqrt( l * Math.PI ) * phi;
+  smartphone.position.setFromSphericalCoords( 11.8, phi, theta );
+  const vector = new THREE.Vector3();
+  vector.copy( smartphone.position ).multiplyScalar( 2 );
+  // smartphone.lookAt( vector );
+  var direction = new THREE.Vector3( 0, 90, 0 ).applyQuaternion( smartphone.quaternion );
+  smartphone.lookAt( direction );
+
+  //Arrow Helpers
+  // const origin = new THREE.Vector3( 0, 0, 0 );
+  // const length = 5;
+  // const hex = 0xffff00;
+  // const arrowHelper = new THREE.ArrowHelper( vector, origin, length, hex );
+  // scene.add( arrowHelper );
+  // const arrowHelperTemp = new THREE.ArrowHelper( direction, smartphone.position, length, hex );
+  // scene.add( arrowHelperTemp );
+
+  // gui.add(smartphone.position, 'x', -10, 10);
+  // gui.add(smartphone.position, 'y', -10, 10);
+  // gui.add(smartphone.position, 'z', -10, 10);
+  // gui.add(smartphone.rotation, 'x', -10, 10);
+  // gui.add(smartphone.rotation, 'y', -10, 10);
+  // gui.add(smartphone.rotation, 'z', -10, 10);
+
+	group.add(smartphone);
+  const light = new THREE.HemisphereLight();
+  group.add( light );
+}, undefined, function ( error ) {
+	console.error( error );
+} );
+loader.load('./objects/smart_lock/gold_lock_improved.glb', function ( gltf ) {
+  let lock = gltf.scene;  // lock 3D object is loaded
+  lock.scale.set(0.05,0.05,0.05);
+  let i=7.15
+  let l=10
+  const phi = Math.acos( - 1 + ( 2 * i ) / l );
+  const theta = Math.sqrt( l * Math.PI ) * phi;
+  lock.position.setFromSphericalCoords( 10, phi, theta );
+  const vector = new THREE.Vector3();
+  vector.copy( lock.position ).multiplyScalar( 2 );
+  // lock.lookAt( vector );
+  var direction = new THREE.Vector3( 0, 90, 0 ).applyQuaternion( lock.quaternion );
+  lock.lookAt( direction );
+  lock.rotation.y = 2.8;
+
+  //Arrow Helpers
+  // const origin = new THREE.Vector3( 0, 0, 0 );
+  // const length = 5;
+  // const hex = 0xffff00;
+  // const arrowHelper = new THREE.ArrowHelper( vector, origin, length, hex );
+  // scene.add( arrowHelper );
+  // const arrowHelperTemp = new THREE.ArrowHelper( direction, lock.position, length, hex );
+  // scene.add( arrowHelperTemp );
+
+  // gui.add(lock.position, 'x', -10, 10);
+  // gui.add(lock.position, 'y', -10, 10);
+  // gui.add(lock.position, 'z', -10, 10);
+  // gui.add(lock.rotation, 'x', -10, 10);
+  // gui.add(lock.rotation, 'y', -10, 10);
+  // gui.add(lock.rotation, 'z', -10, 10);
+
+	group.add(lock);
+  const light = new THREE.HemisphereLight();
+  group.add( light );
+}, undefined, function ( error ) {
+	console.error( error );
+} );
+loader.load('./objects/smart_lock/rfid_readwrite_module_rc522.glb', function ( gltf ) {
+  let rfid = gltf.scene;  // rfid 3D object is loaded
+  // rfid.scale.set(0.05,0.05,0.05);
+  rfid.scale.set(25,25,25);
+  // rfid.scale.set(0.0001, 0.0001, 0.0001);
+  let i=7.25
+  let l=10
+  const phi = Math.acos( - 1 + ( 2 * i ) / l );
+  const theta = Math.sqrt( l * Math.PI ) * phi;
+  rfid.position.setFromSphericalCoords( 10.5, phi, theta );
+  const vector = new THREE.Vector3();
+  vector.copy( rfid.position ).multiplyScalar( 2 );
+  // rfid.lookAt( vector );
+  var direction = new THREE.Vector3( 0, 90, 0 ).applyQuaternion( rfid.quaternion );
+  rfid.lookAt( direction );
+  // rfid.rotation.y = 2.5;
+  rfid.rotation.x = -0.3;
+
+  //Arrow Helpers
+  // const origin = new THREE.Vector3( 0, 0, 0 );
+  // const length = 5;
+  // const hex = 0xffff00;
+  // const arrowHelper = new THREE.ArrowHelper( vector, origin, length, hex );
+  // scene.add( arrowHelper );
+  // const arrowHelperTemp = new THREE.ArrowHelper( direction, rfid.position, length, hex );
+  // scene.add( arrowHelperTemp );
+
+  // gui.add(rfid.position, 'x', -10, 10);
+  // gui.add(rfid.position, 'y', -10, 10);
+  // gui.add(rfid.position, 'z', -10, 10);
+  // gui.add(rfid.rotation, 'x', -10, 10);
+  // gui.add(rfid.rotation, 'y', -10, 10);
+  // gui.add(rfid.rotation, 'z', -10, 10);
+
+	group.add(rfid);
+  const light = new THREE.HemisphereLight();
+  group.add( light );
+}, undefined, function ( error ) {
+	console.error( error );
+} );
+
+//Mobile Tinsel
+loader.load('./objects/mobile_tinsel/low_poly_circuit_board_pcb.glb', function ( gltf ) {
+  let pcb = gltf.scene;  // pcb 3D object is loaded
+  // pcb.scale.set(0.1,0.1,0.1);
+  // pcb.scale.set(25,25,25);
+  pcb.scale.set(1,1,1);
+  // pcb.scale.set(0.0001, 0.0001, 0.0001);
+  let i=3
+  let l=10
+  const phi = Math.acos( - 1 + ( 2 * i ) / l );
+  const theta = Math.sqrt( l * Math.PI ) * phi;
+  pcb.position.setFromSphericalCoords( 10.01, phi, theta );
+  const vector = new THREE.Vector3();
+  vector.copy( pcb.position ).multiplyScalar( 2 );
+  // pcb.lookAt( vector );
+  var direction = new THREE.Vector3( 0, 90, 0 ).applyQuaternion( pcb.quaternion );
+  pcb.lookAt( direction );
+  pcb.rotation.y = -0.5;
+  // pcb.rotation.x = -0.3;
+
+  //Arrow Helpers
+  // const origin = new THREE.Vector3( 0, 0, 0 );
+  // const length = 5;
+  // const hex = 0xffff00;
+  // const arrowHelper = new THREE.ArrowHelper( vector, origin, length, hex );
+  // scene.add( arrowHelper );
+  // const arrowHelperTemp = new THREE.ArrowHelper( direction, pcb.position, length, hex );
+  // scene.add( arrowHelperTemp );
+
+  // gui.add(pcb.position, 'x', -10, 10);
+  // gui.add(pcb.position, 'y', -10, 10);
+  // gui.add(pcb.position, 'z', -10, 10);
+  // gui.add(pcb.rotation, 'x', -10, 10);
+  // gui.add(pcb.rotation, 'y', -10, 10);
+  // gui.add(pcb.rotation, 'z', -10, 10);
+
+	group.add(pcb);
+  const light = new THREE.HemisphereLight();
+  group.add( light );
+}, undefined, function ( error ) {
+	console.error( error );
+} );
+loader.load('./objects/mobile_tinsel/led_light.glb', function ( gltf ) {
+  let led_light = gltf.scene;  // led_light 3D object is loaded
+  // led_light.scale.set(0.1,0.1,0.1);
+  // led_light.scale.set(25,25,25);
+  led_light.scale.set(0.3,0.3,0.3);
+  // led_light.scale.set(0.0001, 0.0001, 0.0001);
+  let i=3.15
+  let l=10
+  const phi = Math.acos( - 1 + ( 2 * i ) / l );
+  const theta = Math.sqrt( l * Math.PI ) * phi;
+  led_light.position.setFromSphericalCoords( 11.5, phi, theta );
+  const vector = new THREE.Vector3();
+  vector.copy( led_light.position ).multiplyScalar( 2 );
+  // led_light.lookAt( vector );
+  var direction = new THREE.Vector3( 0, 90, 0 ).applyQuaternion( led_light.quaternion );
+  led_light.lookAt( direction );
+  led_light.rotation.y = -0.5;
+  // led_light.rotation.x = -0.3;
+
+  //Arrow Helpers
+  // const origin = new THREE.Vector3( 0, 0, 0 );
+  // const length = 5;
+  // const hex = 0xffff00;
+  // const arrowHelper = new THREE.ArrowHelper( vector, origin, length, hex );
+  // scene.add( arrowHelper );
+  // const arrowHelperTemp = new THREE.ArrowHelper( direction, led_light.position, length, hex );
+  // scene.add( arrowHelperTemp );
+
+  // gui.add(led_light.position, 'x', -10, 10);
+  // gui.add(led_light.position, 'y', -10, 10);
+  // gui.add(led_light.position, 'z', -10, 10);
+  // gui.add(led_light.rotation, 'x', -10, 10);
+  // gui.add(led_light.rotation, 'y', -10, 10);
+  // gui.add(led_light.rotation, 'z', -10, 10);
+
+	group.add(led_light);
+  const light = new THREE.HemisphereLight();
+  group.add( light );
+}, undefined, function ( error ) {
+	console.error( error );
+} );
+
+//Rowing
+loader.load('./objects/rowing/rowing.glb', function ( gltf ) {
+  let rowing = gltf.scene;  // rowing 3D object is loaded
+  // rowing.scale.set(0.1,0.1,0.1);
+  // rowing.scale.set(25,25,25);
+  // rowing.scale.set(1,1,1);
+  rowing.scale.set(0.02, 0.02, 0.02);
+  let i=2
+  let l=10
+  const phi = Math.acos( - 1 + ( 2 * i ) / l );
+  const theta = Math.sqrt( l * Math.PI ) * phi;
+  rowing.position.setFromSphericalCoords( 10.7, phi, theta );
+  const vector = new THREE.Vector3();
+  vector.copy( rowing.position ).multiplyScalar( 2 );
+  // rowing.lookAt( vector );
+  var direction = new THREE.Vector3( 0, 90, 0 ).applyQuaternion( rowing.quaternion );
+  rowing.lookAt( direction );
+  rowing.rotation.z = -3;
+  rowing.rotation.y = 7.5;
+  rowing.rotation.x = -4.2;
+
+  //Arrow Helpers
+  // const origin = new THREE.Vector3( 0, 0, 0 );
+  // const length = 5;
+  // const hex = 0xffff00;
+  // const arrowHelper = new THREE.ArrowHelper( vector, origin, length, hex );
+  // scene.add( arrowHelper );
+  // const arrowHelperTemp = new THREE.ArrowHelper( direction, rowing.position, length, hex );
+  // scene.add( arrowHelperTemp );
+
+  // gui.add(rowing.position, 'x', -10, 10);
+  // gui.add(rowing.position, 'y', -10, 10);
+  // gui.add(rowing.position, 'z', -10, 10);
+  // gui.add(rowing.rotation, 'x', -10, 10);
+  // gui.add(rowing.rotation, 'y', -10, 10);
+  // gui.add(rowing.rotation, 'z', -10, 10);
+
+  group.add(rowing);
+  const light = new THREE.HemisphereLight();
+  group.add( light );
+}, undefined, function ( error ) {
+  console.error( error );
+} );
+
 //On mouseover object
 
 
 
 //Orbit Controls
 const controls = new OrbitControls( camera, renderer.domElement );
-controls.minDistance = 25;
+controls.minDistance = 10;
 controls.maxDistance = 50;
 controls.enablePan = false;
 controls.enableDamping = true
@@ -168,8 +412,8 @@ function animate() {
 
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
-  group.rotation.y += 0.003;
-  group.rotation.x += 0.001;
+  // group.rotation.y += 0.003;
+  // group.rotation.x += 0.001;
   controls.update();
 
 }
