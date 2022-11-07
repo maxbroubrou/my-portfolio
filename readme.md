@@ -25,4 +25,5 @@ npm run dev
     - [RFID](https://sketchfab.com/3d-models/rfid-readwrite-module-rc522-09a7fab0dd574bd1bbaa267e78ffd996)
     - [PCB Card](https://sketchfab.com/3d-models/low-poly-circuit-board-pcb-02ce44c491774f438c62baf544382bd1)
     - [LED] (https://sketchfab.com/3d-models/led-light-b962a42c45cc428b8c03cad469c3e42d)
-    
+    - [Satellite](https://sketchfab.com/3d-models/1-satellite-87baf003bc584647a777c640a0ef98f8)
+    - [Antenna](https://sketchfab.com/3d-models/5g-antenna-b731fbe5b89843af92e6a71215ff7330)
