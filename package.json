@@ -13,6 +13,7 @@
     "vite-plugin-string": "^1.1.2"
   },
   "dependencies": {
+    "@danielblagy/three-mmi": "^1.0.0",
     "three": "^0.146.0",
     "three-orbitcontrols": "^2.110.3"
   }

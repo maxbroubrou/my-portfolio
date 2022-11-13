@@ -1,8 +1,12 @@
 DONE:
 - Find a solution to place objects on the sphere surface (and deform object to fit the curved sphere surface)
+- Add other object like smart lock, mobile tinsel, satellite, rowing, B92, Bouygues Telecom, ... 
+- SUPPERPOSE CANVAS !
 
 TO DO:
-- on mouseover object (like the pool) : fix the planet and make appear a dynamic text
+- on mouseover object (like the pool) : fix the planet and make appear a dynamic text next to the mouse pointer + scale up the object size
 - on mouseout object : make the planet rotate again and remove the text
-- Add other object like smart lock, mobile tinsel, satellite, rowing, B92, Bouygues Telecom, ... 
 - prepare text for each object
+- background music (satellite sounds, pool table sounds, ...)
+
+

@@ -4,11 +4,26 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Maxime Broussart Portfolio</title>
+    <script src="modules/CanvasStack-2v01.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- <div id="app"></div> -->
-    <canvas id="bg"></canvas>
+    <div id="container" style="position: absolute; left: 0; top: 0; z-index: 2;">
+      <canvas id="description_area" 
+      style="position: absolute; left: 0; top: 0; z-index: 1;">
+      </canvas>
+      <canvas id="planet"
+      style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
+      <div id="overlay" style="height: 100%; width:28%">
+
+        <h1 id="titre1" style="position: absolute; top: 5%; left: 30px;">Maxime Broussart</h1>
+        <h2 id="titre2" style="position: relative; top: 20%; left: 30px;">Portfolio</h2>
+        <!-- <p id="paragraphe"></p> -->
+       
+      </div>
+    </div>
+    <script type="module" src="/description_area.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

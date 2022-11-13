@@ -9,6 +9,7 @@ Project can be found on continents, and can be clicked to display more informati
 npm install
 npm run dev
 ```
+or ```npm run dev -- --host``` to specify the host
 
 ## Inspirations
 
@@ -17,6 +18,7 @@ npm run dev
 - [Build a Portfolio Website with Vite and Three.js](https://www.section.io/engineering-education/build-a-portfolio-website-with-vite-and-threejs/)
 - [Star textures](https://github.com/mrdoob/three.js/blob/master/examples/textures/sprites/disc.png)
 - [sphere surface objects positions](https://github.com/mrdoob/three.js/blob/master/examples/css3d_periodictable.html)
+- [mouse interaction](https://github.com/danielblagy/three_mmi)
 
 - [For the objects](https://sketchfab.com)
     - [Pool Table](https://sketchfab.com/3d-models/pool-table-set-7a91611c0e5d4f519c9e7cd1425d066a)

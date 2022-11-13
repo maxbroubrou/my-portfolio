@@ -2,5 +2,55 @@ canvas{
   position: fixed;
   top: 0;
   left: 0;
- }
- 
+}
+
+#container {
+  position: relative;
+}
+#container canvas, #overlay {
+  position: absolute;
+}
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+h1 {
+  /* top: 50%;
+  left: 50%; */
+  color: white;
+  font-size: 200%;
+  /* margin: 10%; */
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-weight: 300; */
+  /* text-align: center; */
+  /* height: auto; */
+  /* width: fit-content; */
+  /* text-transform: uppercase; */
+  /* letter-spacing: 0.1rem; */
+  /* z-index: 1; */
+}
+
+h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  /* z-index: 1; */
+}
+
+.absolute {
+  position: absolute;
+  top: 30px;
+  left: 360px;
+  width: 250px;
+  border: 2px solid blue;
+  text-align: center;
+}
