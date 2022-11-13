@@ -4,7 +4,7 @@ import {group} from '../../main.js'
 
 var loader = new GLTFLoader();
 
-let smartphone, lock, rfid
+let smartphone, lock, rfid, cube_smart_lock
 
 loader.load('./objects/smart_lock/Red_Smartphone.glb', function ( gltf ) {
     smartphone = gltf.scene;  // smartphone 3D object is loaded
@@ -22,6 +22,18 @@ loader.load('./objects/smart_lock/Red_Smartphone.glb', function ( gltf ) {
     group.add(smartphone);
     const light = new THREE.HemisphereLight();
     group.add( light );
+
+    const geometry1 = new THREE.BoxGeometry( 2.4, 5, 2.4 );
+    const materials = new THREE.MeshBasicMaterial({
+    color: 'orange',
+    transparent: true,
+    opacity: 0
+    });
+    cube_smart_lock = new THREE.Mesh( geometry1, materials );
+    cube_smart_lock.name = "cube_smart_lock";
+    cube_smart_lock.position.set(smartphone.position.x, smartphone.position.y-0.5, smartphone.position.z-1);
+    cube_smart_lock.lookAt( direction );
+    group.add( cube_smart_lock );
   }, undefined, function ( error ) {
       console.error( error );
   } );
@@ -60,6 +72,9 @@ loader.load('./objects/smart_lock/Red_Smartphone.glb', function ( gltf ) {
     group.add(rfid);
     const light = new THREE.HemisphereLight();
     group.add( light );
+
   }, undefined, function ( error ) {
       console.error( error );
   } );
+
+ 

@@ -23,7 +23,7 @@ loader.load('./objects/pool_table/pool_table_set.glb', function ( gltf ) {
   
     const geometry1 = new THREE.BoxGeometry( 8, 2.5, 5 );
     const materials = new THREE.MeshBasicMaterial({
-    color: 'cyan',
+    color: 'green',
     transparent: true,
     opacity: 0
     });

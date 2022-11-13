@@ -4,7 +4,7 @@ import {group} from '../../main.js'
 
 var loader = new GLTFLoader();
 
-let rowing
+let rowing, sphere_rowing
 
 loader.load('./objects/rowing/rowing.glb', function ( gltf ) {
     rowing = gltf.scene;  // rowing 3D object is loaded
@@ -24,6 +24,23 @@ loader.load('./objects/rowing/rowing.glb', function ( gltf ) {
     group.add(rowing);
     const light = new THREE.HemisphereLight();
     group.add( light );
+
+    const geometry2 = new THREE.BoxGeometry( 5, 2.8, 2.8 );
+    const materials = new THREE.MeshBasicMaterial({
+      color: 'grey',
+      transparent: true,
+      opacity: 0
+      });
+      sphere_rowing = new THREE.Mesh( geometry2, materials );
+      sphere_rowing.name = "sphere_rowing";
+      sphere_rowing.position.set(rowing.position.x, rowing.position.y, rowing.position.z);
+      sphere_rowing.lookAt( direction );
+      sphere_rowing.rotation.z = -3;
+      sphere_rowing.rotation.y = 7.5;
+      sphere_rowing.rotation.x = -4.2;
+
+      group.add( sphere_rowing );
+
   }, undefined, function ( error ) {
     console.error( error );
   } );

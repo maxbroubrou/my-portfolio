@@ -4,7 +4,7 @@ import {group} from '../../main.js'
 
 var loader = new GLTFLoader();
 
-let pcb, led_light
+let pcb, led_light, cube_mobile_tinsel
 
 loader.load('./objects/mobile_tinsel/low_poly_circuit_board_pcb.glb', function ( gltf ) {
     pcb = gltf.scene;  // pcb 3D object is loaded
@@ -41,6 +41,19 @@ loader.load('./objects/mobile_tinsel/low_poly_circuit_board_pcb.glb', function (
     group.add(led_light);
     const light = new THREE.HemisphereLight();
     group.add( light );
+
+    const geometry1 = new THREE.BoxGeometry( 4, 2.5, 3 );
+    const materials = new THREE.MeshBasicMaterial({
+    color: 'red',
+    transparent: true,
+    opacity: 0
+    });
+    cube_mobile_tinsel = new THREE.Mesh( geometry1, materials );
+    cube_mobile_tinsel.name = "cube_mobile_tinsel";
+    cube_mobile_tinsel.position.set(pcb.position.x, pcb.position.y, pcb.position.z-0.6);
+    cube_mobile_tinsel.lookAt( direction );
+    cube_mobile_tinsel.rotation.y = -0.5;
+    group.add( cube_mobile_tinsel );
   }, undefined, function ( error ) {
       console.error( error );
   } );

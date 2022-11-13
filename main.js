@@ -7,6 +7,7 @@ import './objects/smart_lock/smart_lock.js';
 import './objects/rowing/rowing.js';
 import './objects/satellite/satellite.js';
 import {sphere, atmosphere, stars} from './planet.js'
+import {description_area_onWindowResize} from './description_area.js'
 
 // Initialize scene and camera
 const scene  = new THREE.Scene();
@@ -44,12 +45,16 @@ function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize( window.innerWidth, window.innerHeight );
+  description_area_onWindowResize();
 }
 
 // Mouse interaction
 const mmi = new MouseMeshInteraction(scene, camera);
+//#region mmi
 
+//Pool Table
 mmi.addHandler("cube_pool_table", 'click', function(mesh) {
+  document.getElementById("pool_sound").play();
   window.alert("Interactive Pool Project");
 });
 mmi.addHandler("cube_pool_table", 'mouseenter', function(mesh) {
@@ -58,6 +63,81 @@ mmi.addHandler("cube_pool_table", 'mouseenter', function(mesh) {
 mmi.addHandler("cube_pool_table", 'mouseleave', function(mesh) {
   mesh.material.opacity = 0;
 });
+
+
+//Smart Lock
+mmi.addHandler("cube_smart_lock", 'click', function(mesh) {
+  document.getElementById("smart_lock_sound").play();
+  window.alert("Smart Lock Project");
+});
+mmi.addHandler("cube_smart_lock", 'mouseenter', function(mesh) {
+  mesh.material.opacity = 0.4;
+});
+mmi.addHandler("cube_smart_lock", 'mouseleave', function(mesh) {
+  mesh.material.opacity = 0;
+});
+
+
+//Mobile Tinsel
+mmi.addHandler("cube_mobile_tinsel", 'click', function(mesh) {
+  document.getElementById("mobile_tinsel_sound").play();
+  window.alert("Mobile Tinsels Project");
+});
+mmi.addHandler("cube_mobile_tinsel", 'mouseenter', function(mesh) {
+  mesh.material.opacity = 0.4;
+});
+mmi.addHandler("cube_mobile_tinsel", 'mouseleave', function(mesh) {
+  mesh.material.opacity = 0;
+});
+
+
+//Antenna & Satellite
+mmi.addHandler("cube_antenna", 'click', function(mesh) {
+  let satellite_sound = document.getElementById("satellite_sound")
+  satellite_sound.play();
+  satellite_sound.volume = 0.4;
+  window.alert("Hack the satellite Project!");
+});
+mmi.addHandler("cube_antenna", 'mouseenter', function(mesh) {
+  mesh.material.opacity = 0.4;
+  scene.children[1].children[1].material.opacity = 0.4;
+});
+mmi.addHandler("cube_antenna", 'mouseleave', function(mesh) {
+  scene.children[1].children[1].material.opacity = 0;
+  mesh.material.opacity = 0;
+});
+mmi.addHandler("sphere_satellite", 'click', function(mesh) {
+  let satellite_sound = document.getElementById("satellite_sound")
+  satellite_sound.play();
+  satellite_sound.volume = 0.4;
+  window.alert("Hack the satellite Project!");
+});
+mmi.addHandler("sphere_satellite", 'mouseenter', function(mesh) {
+  mesh.material.opacity = 0.4;
+  scene.children[0].children[14].material.opacity = 0.4;
+});
+mmi.addHandler("sphere_satellite", 'mouseleave', function(mesh) {
+  mesh.material.opacity = 0;
+  scene.children[0].children[14].material.opacity = 0;
+});
+
+
+//Rowing
+mmi.addHandler("sphere_rowing", 'click', function(mesh) {
+  document.getElementById("rowing_sound").play();
+  window.alert("My passion : rowing!");
+});
+mmi.addHandler("sphere_rowing", 'mouseenter', function(mesh) {
+  mesh.material.opacity = 0.4;
+});
+mmi.addHandler("sphere_rowing", 'mouseleave', function(mesh) {
+  mesh.material.opacity = 0;
+});
+
+//#endregion
+
+let audio = document.getElementById("bg_music");
+audio.volume = 0.2; 
 
 
 function animate() {
