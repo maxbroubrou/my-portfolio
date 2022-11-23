@@ -7,6 +7,7 @@ var loader = new GLTFLoader();
 let pool_table, cube_pool_table
 
 loader.load('./objects/pool_table/pool_table_set.glb', function ( gltf ) {
+// loader.load('./assets/pool_table_set.glb', function ( gltf ) {
     pool_table = gltf.scene;  // pool_table 3D object is loaded
     pool_table.scale.set(0.0001, 0.0001, 0.0001);
     pool_table.name = 'pool_table';
