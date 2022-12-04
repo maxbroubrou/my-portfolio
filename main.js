@@ -7,10 +7,11 @@ import './objects/smart_lock/smart_lock.js';
 import './objects/rowing/rowing.js';
 import './objects/satellite/satellite.js';
 import {sphere, atmosphere, stars} from './planet.js'
-import {description_area_onWindowResize} from './description_area.js'
+import {closeModalButtons, overlay, openModal, closeModal} from './modal_controller.js';
+
+// import {description_area_onWindowResize} from './description_area.js'
 // import { CanvasUI } from '/jsm/CanvasUI.js';
 // import ThreeMeshUI from 'three-mesh-ui'
-
 
 
 // Initialize scene and camera
@@ -22,7 +23,8 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setPixelRatio( window.devicePixelRatio);
 renderer.setSize( window.innerWidth, window.innerHeight);
-scene.background = new THREE.Color( 0x5555ff );
+// scene.background = new THREE.Color( 0x5555ff );
+scene.background = new THREE.Color( 0x0C8DE8 );
 var clock = new THREE.Clock();
 var delta, elapsed
 
@@ -49,7 +51,7 @@ function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize( window.innerWidth, window.innerHeight );
-  description_area_onWindowResize();
+  // description_area_onWindowResize();
 }
 
 // Mouse interaction
@@ -59,7 +61,8 @@ const mmi = new MouseMeshInteraction(scene, camera);
 //Pool Table
 mmi.addHandler("cube_pool_table", 'click', function(mesh) {
   document.getElementById("pool_sound").play();
-  window.alert("Interactive Pool Project");
+  // window.alert("Interactive Pool Project");
+  openModal(document.querySelector('#modal'), 'pool_table');
 });
 mmi.addHandler("cube_pool_table", 'mouseenter', function(mesh) {
   mesh.material.opacity = 0.4;
@@ -72,7 +75,8 @@ mmi.addHandler("cube_pool_table", 'mouseleave', function(mesh) {
 //Smart Lock
 mmi.addHandler("cube_smart_lock", 'click', function(mesh) {
   document.getElementById("smart_lock_sound").play();
-  window.alert("Smart Lock Project");
+  // window.alert("Smart Lock Project");
+  openModal(document.querySelector('#modal'), 'smart_lock');
 });
 mmi.addHandler("cube_smart_lock", 'mouseenter', function(mesh) {
   mesh.material.opacity = 0.4;
@@ -85,7 +89,8 @@ mmi.addHandler("cube_smart_lock", 'mouseleave', function(mesh) {
 //Mobile Tinsel
 mmi.addHandler("cube_mobile_tinsel", 'click', function(mesh) {
   document.getElementById("mobile_tinsel_sound").play();
-  window.alert("Mobile Tinsels Project");
+  // window.alert("Mobile Tinsels Project");
+  openModal(document.querySelector('#modal'), 'mobile_tinsels');
 });
 mmi.addHandler("cube_mobile_tinsel", 'mouseenter', function(mesh) {
   mesh.material.opacity = 0.4;
@@ -100,7 +105,8 @@ mmi.addHandler("cube_antenna", 'click', function(mesh) {
   let satellite_sound = document.getElementById("satellite_sound")
   satellite_sound.play();
   satellite_sound.volume = 0.4;
-  window.alert("Hack the satellite Project!");
+  // window.alert("Hack the satellite Project!");
+  openModal(document.querySelector('#modal'), 'satellite');
 });
 mmi.addHandler("cube_antenna", 'mouseenter', function(mesh) {
   mesh.material.opacity = 0.4;
@@ -114,7 +120,8 @@ mmi.addHandler("sphere_satellite", 'click', function(mesh) {
   let satellite_sound = document.getElementById("satellite_sound")
   satellite_sound.play();
   satellite_sound.volume = 0.4;
-  window.alert("Hack the satellite Project!");
+  // window.alert("Hack the satellite Project!");
+  openModal(document.querySelector('#modal'), 'satellite');
 });
 mmi.addHandler("sphere_satellite", 'mouseenter', function(mesh) {
   mesh.material.opacity = 0.4;
@@ -129,7 +136,8 @@ mmi.addHandler("sphere_satellite", 'mouseleave', function(mesh) {
 //Rowing
 mmi.addHandler("sphere_rowing", 'click', function(mesh) {
   document.getElementById("rowing_sound").play();
-  window.alert("My passion : rowing!");
+  // window.alert("My passion : rowing!");
+  openModal(document.querySelector('#modal'), 'rowing');
 });
 mmi.addHandler("sphere_rowing", 'mouseenter', function(mesh) {
   mesh.material.opacity = 0.4;
@@ -140,8 +148,8 @@ mmi.addHandler("sphere_rowing", 'mouseleave', function(mesh) {
 
 //#endregion
 
-let audio = document.getElementById("bg_music");
-audio.volume = 0.2; 
+// let audio = document.getElementById("bg_music");
+// audio.volume = 0.2; 
 
 // const ui = new CanvasUI(  );
 // ui.mesh.position.set(0, -0.5, -1);

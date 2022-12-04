@@ -1,0 +1,52 @@
+{
+    "pool_table" : {
+        "title" : "Interactive pool project",
+        "subtitle" : "An augmented reality pool table to improve education",
+        "date" : "November 2021 - Current",
+        "description" : "The interactive pool is a mathematics and physics learning platform using gamification. It is a classical pool augmented by a projector-camera system. A camera looks down the table and a projector display information on the table. This setup makes the pool an AR platform and allows an interaction between the real-world movements detected by the camera and the computer that display information on the table.\n\nThis project enables me to learn multiple skills in computer vision (such as ball tracking and hand recognition), as well as web application development, networking, design user experience, and programming in Python and Javascript. It is also a great experience to work as a team, as I have been developing with peers a software operating system for augmented reality interfaces with a scalable and performance-oriented design : GOSAI.\n\nThis platform is the subject of a scientific research project to demonstrate the educational and learning contribution of such a platform called a tangible user interface (TUI).",
+        "project_image" : "img/pool_table.png",
+        "project_link" : "https://dvic.devinci.fr/projects/educationnal-billard",
+        "github_link" : "https://github.com/GOSAI-DVIC/interactive-pool",
+        "credits": "This project belongs to my innovation laboratory DVIC. \nI must thank all the other contributors of the project : Louis Geisler, Thomas Juldo, Yliess Hati, under the supervision of Dr. Clément Duhart, and Dr. Xiao Xiao."
+    },
+    "smart_lock" : {
+        "title" : "Smart Lock project",
+        "subtitle" : "An electronic lock with RFID card protection",
+        "date" : "June 2021 - October 2021",
+        "description" : "Smart Lock is a project that aims to secure and manage the inventory of lockers. Users can open the lockers with their student card depending on their access permission, managed in a back-end server. Users can register their badge in the database directly from the smart-lock. The system has been engineered smartly to be replicable, and easily modifiable.\n\nThe system is powered by a Raspberry Pi V3 single-board computer and the locker is moved by a solenoid. Student's cards are read with an RFID reader. A touchscreen on the door permits interaction with the user, especially for locker inventory management and for registering new users.",
+        "project_image" : "/img/smart_lock.png",
+        "project_link" : "https://maximebroussart.myportfolio.com/smart-lock",
+        "github_link" : "https://github.com/maxbroubrou/SMART-LOCK",
+        "credits": "I realised this project in collaboration with Louis Bader (master student), under the supervision of Dr. Clément Duhart. A big thanks to Grégor Jouet, PhD student in computer sciences & artificial intelligence, for his advices and contributions on the project."
+    },
+    "mobile_tinsels": {
+        "title" : "Mobile tinsel project",
+        "subtitle" : "A portable waterproof led tinsels",
+        "date" : "October 2021 - December 2021",
+        "description" : "This project is a portable led tinsel that can be used for art decoration or aesthetic usage. It is waterproof and can be used outside. These lights also equip me with lights for my early rowing sessions before sunrise. \n\nPowered by a battery, light parterns of the leds can be controlled with a button. A micro-controller ATtiny 85 instructs the animations program of the system. \n\nAs a challenge, I programmed the MCU in AVR-C (register programming). I programmed the led animations through periodic cycles close to the bytes, working with registers and interuptions. To create smooth light animations, I used trigonometric function with non-regular periods.",
+        "project_image" : "/img/mobile_tinsels.png",
+        "project_link" : "",
+        "github_link" : "https://github.com/maxbroubrou/SMART-LOCK",
+        "credits": "A big thank to Brice Parilusyan, PhD student in soft robotics, for his advices and contributions on the project." 
+    },
+    "satellite": {
+        "title" : "Earth selfie with a custom antenna",
+        "subtitle" : "DIY Antenna + SDR to detect satellite signal",
+        "date" : "August 2021",
+        "description" : "During a Bootcamp at the very beginning of my Creative Technology engineering master, we went to the countryside and built our own antenna from basic materials: aluminum, co-axial cable, and wood! \n\nPer group of four, we first built a V-dipole antenna: two aluminum rods connected to a choc block in order to obtain a 'V-shape'. The 2 dipole legs must form an angle of 120°. \nAs for the rod length, it depends on the targetted frequency. In our case, each leg must measure 53,4 cm. Then, with my team, we challenged ourselves and we built a double cross-antenna. The construction of this second antenna had for goal to better receive the electromagnetic waves thanks to its 4 rods placed in double-crossing. This second antenna effectively proved its better performances: we were rarely losing the radio signal, even through walls. \n\nTo interpret the electromagnetic wave into a usable signal, we used a Sofware-Defined Radio (SDR). An SDR system is a configurable radiocommunication system that is performing many hardware protocols such as amplification, filtering, analog/digital conversions, encryption, or network routing. In our experience, the SDR permits us to convert the Radio frequencies directly into an output signal, usable by our computer. This is notably thanks to the SDR that we can choose the frequencies we want to receive. An SDR is composed of hardware and software parts. We used GQRX (Linux) as a radio receiver software to target and receive specific frequencies. We were able to listen to the radio FM, but our main objective was to get satellite signals!\n\nNOAA satellites are American weather satellites. These spacecraft were for the first time launched more than 40 years ago. They are still in space and send earth picture data continuously by Automatic Picture Transmission (APT) in the frequency range of 137-138 MHz. NOAA satellites pass over Europe a few times per day with different elevation angles, depending on the receiver position. The closest to 90° is the elevation angle, the better is the received signal. Websites and software (such as Gpredict) allow knowing their passage time. We recorded their emitting signal with our custom antenna and processed the signal to get the Earth picture!",
+        "project_image" : "/img/satellite.png",
+        "project_link" : "https://maximebroussart.myportfolio.com/earth-selfie-with-a-custom-antenna",
+        "github_link" : "https://github.com/wimausberlin/noaa-satellites",
+        "credits": "A big thanks to my teammates for this nice, fun and challenging workshop: Wim Poignon, Louis-Marie Restout, and Romain Manoïlov. \nAnd to DVIC staff for the organisation of this workshop, Gershon Dublon, at the origin of the idea." 
+    },
+    "rowing" : {
+        "title" : "Engaged rowing competitor",
+        "subtitle" : "My passion and leisure activity",
+        "date" : "Since 2013",
+        "description" : "Rigor, efficiency, and surpassing myself have been my drivers to help me succeed in my engineering project goals.  I gained this work ethic from rowing, a very demanding sport which, after nine years of effort and competition, culminated in winning two French championships titles in 2022 (in senior lightweigh coxless four, and in senior under-23 mixed 8). I am a member of Boulogne 92 ACBB rowing club, of the city of Paris, and I am currently in the senior-elite category. \n\nActive in the student life of my school, I also co-founded and chaired Aviron De Vinci, a student rowing association. I led and coached a group of 30 students to the national university championships last year, and am currently co-organizing a competition in the heart of Paris, expecting 300 athletes.",
+        "project_image" : "/img/rowing.jpg",
+        "project_link" : "https://www.boulogne92.fr/blog/index.php?post/2022/06/05/Championnats-de-France-bateaux-longs-%C3%A0-Vichy,-du-3-au-5-juin-2022",
+        "github_link" : "",
+        "credits": "I thank my coachs, my teammates, my friends and family for their support and encouragement." 
+    }
+}

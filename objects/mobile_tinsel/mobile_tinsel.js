@@ -42,7 +42,7 @@ loader.load('./objects/mobile_tinsel/low_poly_circuit_board_pcb.glb', function (
     const light = new THREE.HemisphereLight();
     group.add( light );
 
-    const geometry1 = new THREE.BoxGeometry( 4, 2.5, 3 );
+    const geometry1 = new THREE.BoxGeometry( 5, 2.5, 5 );
     const materials = new THREE.MeshBasicMaterial({
     color: 'red',
     transparent: true,

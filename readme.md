@@ -19,6 +19,7 @@ or ```npm run dev -- --host``` to specify the host
 - [Star textures](https://github.com/mrdoob/three.js/blob/master/examples/textures/sprites/disc.png)
 - [sphere surface objects positions](https://github.com/mrdoob/three.js/blob/master/examples/css3d_periodictable.html)
 - [mouse interaction](https://github.com/danielblagy/three_mmi)
+- [pop-up window](https://www.youtube.com/watch?v=MBaw_6cPmAw)
 
 - [For the objects](https://sketchfab.com)
     - [Pool Table](https://sketchfab.com/3d-models/pool-table-set-7a91611c0e5d4f519c9e7cd1425d066a)

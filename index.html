@@ -8,15 +8,15 @@
     <title>Maxime Broussart Portfolio</title>
     <script src="modules/CanvasStack-2v01.js"></script>
     <link rel="stylesheet" href="style.css">
-    
   </head>
   <body>
-    <!-- <source src="./objects/pool_table/pool_table_set.glb">
-       <source src="./objects/pool_table/pool_table_set.glb"> -->
-     <!-- <object data="./objects/pool_table/pool_table_set.glb" src="./objects/pool_table/pool_table_set.glb" type=""></object> -->
-    <audio controls autoplay id="bg_music" loop="true">
+    <!-- <audio controls autoplay id="bg_music" loop="true">
       <source src="./assets/Consort for Brass - Classical Rousing - Kevin MacLeod.mp3" type="audio/mpeg">
     </audio> 
+    <script>
+      let audio = document.getElementById("bg_music");
+      audio.volume = 0.2; 
+    </script> -->
     <audio id="pool_sound">
       <source src="./objects/pool_table/pool_sounds.mp3">
     </audio>
@@ -33,9 +33,39 @@
       <source src="./objects/rowing/rowing.mp3">
     </audio>
     <div id="container" style="position: absolute; left: 0; top: 0;">
-      <canvas id="description_area" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+      <!-- <canvas id="description_area" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas> -->
+      
       <canvas id="planet" style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
-      <div  style="height: 100%; width:28%;">
+      <!-- <button style="z-index: 5;">Salut</button> -->
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <div id="title" class="title">Title</div>
+          <div id="subtitle" class="subtitle">Subtitle</div>
+          <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id="date" class="date">Date</p>
+          <!-- <p>test<br>test</p> -->
+          <p id="description" class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, nostrum!</p>
+          <img id="project_image" class="image" alt="Image of the project">
+          <br><br>
+          <div style="width: 100%; height: 0.5rem; border-bottom: 1px solid #0A2463; text-align: center">
+            <span style="font-size: 1rem; background-color: white; padding: 0 10px;">
+              Read more <!--Padding is optional-->
+            </span>
+          </div>
+          <br>
+          <div class="link-icons">
+            <a id="project_link" href="https://dvic.devinci.fr/"><img src="img/website.ico" alt=""></a>
+            <a id="github_link" href="https://github.com/"><img src="img/github.ico" alt=""></a>
+          </div>
+          <p id="credits" class="credits">Credits</p>
+        </div>
+      </div>
+      <div id="overlay"></div>
+
+
+      <!-- <div  style="height: 100%; width:28%;">
 
         <h1 id="titre1" style="position: absolute; top: 5px; left: 30px; z-index: 2;">Maxime Broussart</h1>
         <h2 id="titre2" style="position: absolute; top: 100px; left: 30px; z-index: 2;">Portfolio</h2>
@@ -47,9 +77,10 @@
 
         
        
-      </div>
+      </div> -->
     </div>
-    <script type="module" src="/description_area.js"></script>
+    
+    <!-- <script type="module" src="/description_area.js"></script> -->
     <script type="module" src="/main.js"></script>
   </body>
 </html>
