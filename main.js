@@ -8,6 +8,10 @@ import './objects/rowing/rowing.js';
 import './objects/satellite/satellite.js';
 import {sphere, atmosphere, stars} from './planet.js'
 import {description_area_onWindowResize} from './description_area.js'
+// import { CanvasUI } from '/jsm/CanvasUI.js';
+// import ThreeMeshUI from 'three-mesh-ui'
+
+
 
 // Initialize scene and camera
 const scene  = new THREE.Scene();
@@ -139,11 +143,49 @@ mmi.addHandler("sphere_rowing", 'mouseleave', function(mesh) {
 let audio = document.getElementById("bg_music");
 audio.volume = 0.2; 
 
+// const ui = new CanvasUI(  );
+// ui.mesh.position.set(0, -0.5, -1);
+// ui.updateElement("body", "Hello World" );
+
+// scene.add(ui.mesh);
+// let ui = new CanvasUI();
+// ui.mesh.position.set(0, -0.5, -1);
+// ui.updateElement("body", "Hello World" );
+// scene.add(ui.mesh);
+
+// ui.updateElement("body", "Hello World");
+
+// ui.mesh.position.set(0, 1.5, -1.2);
+// scene.add(ui)
+
+
+
+// const container = new ThreeMeshUI.Block({
+//   width: 10.2,
+//   height: 12.7,
+//   padding: 0.2,
+//   fontFamily: './assets/Roboto-msdf.json',
+//   fontTexture: './assets/Roboto-msdf.png',
+//  });
+ 
+//  //
+ 
+//  const text = new ThreeMeshUI.Text({
+//   content: "Some text to be displayed"
+//  });
+ 
+//  container.add( text );
+//  container.position.set( 10, 1, -1.8 );
+ 
+//  // scene is a THREE.Scene (see three.js)
+//  scene.add( container );
+
 
 function animate() {
   requestAnimationFrame(animate);
   onWindowResize();
-
+  // ThreeMeshUI.update();
+  // ui.update();
   //Sattelite rotation
   delta = clock.getDelta();
   elapsed = clock.elapsedTime;
