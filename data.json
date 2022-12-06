@@ -48,5 +48,16 @@
         "project_link" : "https://www.boulogne92.fr/blog/index.php?post/2022/06/05/Championnats-de-France-bateaux-longs-%C3%A0-Vichy,-du-3-au-5-juin-2022",
         "github_link" : "",
         "credits": "I thank my coachs, my teammates, my friends and family for their support and encouragement." 
+    },
+    "puckle" : {
+        "title" : "PUCKLE",
+        "subtitle" : "Kickstarter : a fun puck throwing game",
+        "date" : "Since October 2021",
+        "description" : "Puckle is a kickstarter that I undertook as a team. It consisted of designing a product, optimizing it, canvassing factories, launching a crownfounding campaign on the kickstarter website, and finally delivering it to backers.\n\nWe named it 'Puckle', it is a throwing game made of silicon disks. The game is simple and full of surprises: it creates fun and happy moments with your friends, family, colleagues, children, or whoever!\n\nThe game is inspired by the “petanque” game, a famous French game. But with an additional rule that changes everything! Take a look on puckle website page to know more about Puckle story!",
+        "project_image" : "/img/puckle.png",
+        "project_link" : "https://www.kickstarter.com/projects/puckle/quickstarter-puckle-a-fun-throwing-game   ",
+        "github_link" : "",
+        "credits": "Thanks to my great teammates for this great adventure: Romain Manoïlov, Adem Rahal, Louis-Marie Restout, and Hugo Dardill. \nThanks a lot to Charlie Zehnlé for coaching us on the project, Clément Duhart and Marc Teyssier for allowing us to do this adventure." 
+    
     }
 }

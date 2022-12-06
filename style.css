@@ -127,7 +127,8 @@ h2 {
 }
 
 .modal-body .description {
-  white-space: pre-wrap
+  white-space: pre-wrap;
+  font-size: 1.5rem;
 }
 
 .modal-body .image {

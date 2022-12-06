@@ -6,6 +6,7 @@ import './objects/mobile_tinsel/mobile_tinsel.js';
 import './objects/smart_lock/smart_lock.js';
 import './objects/rowing/rowing.js';
 import './objects/satellite/satellite.js';
+import './objects/puckle/puckle.js';
 import {sphere, atmosphere, stars} from './planet.js'
 import {closeModalButtons, overlay, openModal, closeModal} from './modal_controller.js';
 
@@ -146,10 +147,25 @@ mmi.addHandler("sphere_rowing", 'mouseleave', function(mesh) {
   mesh.material.opacity = 0;
 });
 
+//Puckle
+mmi.addHandler("sphere_puckle", 'click', function(mesh) {
+  document.getElementById("puckle_sound").play();
+  // window.alert("My passion : puckle!");
+  openModal(document.querySelector('#modal'), 'puckle');
+});
+mmi.addHandler("sphere_puckle", 'mouseenter', function(mesh) {
+  mesh.material.opacity = 0.4;
+});
+mmi.addHandler("sphere_puckle", 'mouseleave', function(mesh) {
+  mesh.material.opacity = 0;
+});
+
 //#endregion
 
-// let audio = document.getElementById("bg_music");
-// audio.volume = 0.2; 
+let audio = document.getElementById("bg_music");
+audio.volume = 1; 
+//REPRENDRE ICI:
+audio.muted = true;
 
 // const ui = new CanvasUI(  );
 // ui.mesh.position.set(0, -0.5, -1);

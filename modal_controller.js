@@ -38,7 +38,7 @@ closeModalButtons.forEach(button => {
 
 function openModal(modal, project) {
   if (modal == null) return
-  
+  modal.scrollTo(0,0);
   title.textContent = data[project].title;
   subtitle.textContent = data[project].subtitle;
   date.textContent = data[project].date;
