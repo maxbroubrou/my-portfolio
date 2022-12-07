@@ -32,3 +32,9 @@ or ```npm run dev -- --host``` to specify the host
     - [Antenna](https://sketchfab.com/3d-models/5g-antenna-b731fbe5b89843af92e6a71215ff7330)
 
 - Music : Consort for Brass - Classical Rousing de Kevin MacLeod fait l'objet d'une licence [Creative Commons Attribution 4.0.](https://creativecommons.org/licenses/by/4.0/), [Source](http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100681), [Artiste](http://incompetech.com/)
+
+## Graphical chart:
+
+- planet surface #0ee1ff
+- background and contour #0C8DE8
+- text : #0A2463;
