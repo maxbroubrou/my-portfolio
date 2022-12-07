@@ -54,6 +54,9 @@ h2 {
   border: 2px solid blue;
   text-align: center;
 } */
+#my{
+  zoom: 100%;
+  }
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -174,3 +177,182 @@ h2 {
   pointer-events: all;
 }
 
+.button-62 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  position: fixed;
+  top: 5%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-62:not([disabled]):focus {
+  z-index: 1;
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  z-index: 1;
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+
+/* ====================================== */
+/* on/off switch toggle */
+/* ====================================== */
+#switch-container {
+  margin: 1rem 0;
+}
+
+#sound-off-icon,
+#sound-on-icon {
+  z-index: 0;
+  position: absolute;
+}
+
+#sound-off-icon {
+  top: 9px;
+  right: 7px;
+}
+
+#sound-on-icon {
+  top: .5rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch:before input { 
+  content: "switch";
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input:before {
+  content: "input";
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c7c7c7;  /* light gray */
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #00ff7f; /* blue */
+}
+
+input:focus + .slider {
+  /* blue */
+  box-shadow: 0 0 1px #00ff7f; /* blue */
+}
+
+input:checked + .slider:before {
+  content: "";
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* give the button rounded edges */
+/* for square edges, remove these values */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #fff;
+}
+
+.svg-icon circle {
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+
+
+/* ====================================== */
+/* lavendar sound making button  */
+/* ====================================== */
+#sound-making-button {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: .5rem 2rem;
+  border: none;
+  background-color: #e8cce2;
+  color: #333;
+  font-family: sans-serif;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .4);
+  transition: box-shadow .25s, background-color .25s;
+}
+
+#sound-making-button:hover {
+  cursor: pointer;
+  background-color: #dec5d9;
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, .5);
+}

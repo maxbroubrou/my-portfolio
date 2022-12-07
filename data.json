@@ -58,6 +58,15 @@
         "project_link" : "https://www.kickstarter.com/projects/puckle/quickstarter-puckle-a-fun-throwing-game   ",
         "github_link" : "",
         "credits": "Thanks to my great teammates for this great adventure: Romain Manoïlov, Adem Rahal, Louis-Marie Restout, and Hugo Dardill. \nThanks a lot to Charlie Zehnlé for coaching us on the project, Clément Duhart and Marc Teyssier for allowing us to do this adventure." 
-    
+    },
+    "about" : {
+        "title" : "ABOUT ME",
+        "subtitle" : "Maxime BROUSSART",
+        "date" : "Software engineer & Creative Technologist student",
+        "description" : "➡️ ➡️ ➡️ LOOKING FOR A 6-MONTH INTERNSHIP FROM 1st of MARCH 2023 ⬅️ ⬅️ ⬅️\n📩 maxime.broussart@edu.devinci.fr 📩\n\nI am a Creative Technology Master's student in computer science, software engineeering, programming, UX, and Human-Computer Interaction. Curious and passionate about sciences, I like to use my creativity and the best of technology to improve human life, especially in the field of software engineering.\n\nMy current flagship project is an interactive pool, an augmented reality pool table thanks to a camera-projector system, to improve mathematics and physics learning through games (look at the pool table on the planet!).\n\nMy favorite programming languages are Python, Javascript and C#, and I feel very comfortable with UNIX environnement, API protocols, and web development. I also love electronic prototyping.\n\nIn my freetime, I practice rowing at a national competition level (Double 2022 French champion). Board member of my rowing club Boulogne 92 ACBB, I am implied in the event committee. I also co-created then presided 'Aviron De Vinci', my school student rowing association.\n\nI am currently looking for a 6-month internship abroad France from 1st of March 2023, in the field of software engineering, computer vision, web development, augmented reality, ideally in a R&D department. I am open to any proposal, and I am very motivated to learn new things and to work on new projects!",
+        "project_image" : "/img/maxime.jpg",
+        "project_link" : "https://www.linkedin.com/in/maxime-broussart-a0b0b0170/",
+        "github_link" : "https://github.com/maxbroubrou",
+        "credits": "© 2022 Maxime Broussart\nHello there!" 
     }
 }

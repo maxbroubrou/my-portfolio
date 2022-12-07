@@ -162,10 +162,20 @@ mmi.addHandler("sphere_puckle", 'mouseleave', function(mesh) {
 
 //#endregion
 
-let audio = document.getElementById("bg_music");
-audio.volume = 1; 
-//REPRENDRE ICI:
-audio.muted = true;
+
+//When button triggered, open modal
+about_button.addEventListener("click", function() {
+  document.getElementById("smart_lock_sound").play();
+  openModal(document.querySelector('#modal'), 'about');
+});
+
+//when download button triggered, play download sound
+download_ENG.addEventListener("click", function() {
+  document.getElementById("download_sound").play();
+});
+download_FR.addEventListener("click", function() {
+  document.getElementById("download_sound").play();
+});
 
 // const ui = new CanvasUI(  );
 // ui.mesh.position.set(0, -0.5, -1);
