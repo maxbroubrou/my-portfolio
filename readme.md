@@ -3,6 +3,10 @@
 A planet portfolio made with Three.js and Vue.js
 Project can be found on continents, and can be clicked to display more information.
 
+## Demo
+
+[Demo website](https://maximebroussart.com)
+
 ## To start
 
 ```bash
