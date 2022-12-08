@@ -126,7 +126,8 @@ h2 {
   font-size: 1.2rem;
   font-style: italic;
   padding-bottom: 6px;
-  color: #0A2463
+  color: #0A2463;
+  white-space: pre-wrap;
 }
 
 .modal-body .description {
