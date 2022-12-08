@@ -1,3 +1,5 @@
+data.json
+
 # Logs
 logs
 *.log
@@ -22,4 +24,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-todo
