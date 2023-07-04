@@ -7,6 +7,10 @@ Project can be found on continents, and can be clicked to display more informati
 
 [Demo website](https://maximebroussart.com)
 
+<p align="center">
+<img src="./img/maxime_portfolio.jpg" alt="website demo screenshot" width="500"/>
+</p>
+
 ## To start
 
 ```bash
