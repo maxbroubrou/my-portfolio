@@ -7,6 +7,8 @@ import './objects/smart_lock/smart_lock.js';
 import './objects/rowing/rowing.js';
 import './objects/satellite/satellite.js';
 import './objects/puckle/puckle.js';
+import './objects/bytel/bytel.js';
+import './objects/vg/vg.js';
 import { sphere, atmosphere, stars } from './planet.js';
 import { openModal } from './modal_controller.js';
 
@@ -110,9 +112,7 @@ mmi.addHandler('cube_mobile_tinsel', 'mouseleave', function (mesh) {
 
 // Antenna & Satellite
 mmi.addHandler('cube_antenna', 'click', function (mesh) {
-  const satelliteSound = document.getElementById('satelliteSound');
-  satelliteSound.play();
-  satelliteSound.volume = 0.4;
+  document.getElementById('satellite_sound').play().volume = 0.4;
   openModal(document.querySelector('#modal'), 'satellite');
 });
 mmi.addHandler('cube_antenna', 'mouseenter', function (mesh) {
@@ -124,18 +124,18 @@ mmi.addHandler('cube_antenna', 'mouseleave', function (mesh) {
   mesh.material.opacity = 0;
 });
 mmi.addHandler('sphere_satellite', 'click', function (mesh) {
-  const satelliteSound = document.getElementById('satelliteSound');
-  satelliteSound.play();
-  satelliteSound.volume = 0.4;
+  document.getElementById('satellite_sound').play().volume = 0.4;
   openModal(document.querySelector('#modal'), 'satellite');
 });
 mmi.addHandler('sphere_satellite', 'mouseenter', function (mesh) {
   mesh.material.opacity = 0.4;
-  scene.children[0].children[14].material.opacity = 0.4;
+  scene.children[1].children[1].material.opacity = 0.4;
+  // scene.children[0].children[14].material.opacity = 0.4;
 });
 mmi.addHandler('sphere_satellite', 'mouseleave', function (mesh) {
   mesh.material.opacity = 0;
-  scene.children[0].children[14].material.opacity = 0;
+  scene.children[1].children[1].material.opacity = 0;
+  // scene.children[0].children[14].material.opacity = 0;
 });
 
 // Rowing
@@ -159,6 +159,30 @@ mmi.addHandler('sphere_puckle', 'mouseenter', function (mesh) {
   mesh.material.opacity = 0.4;
 });
 mmi.addHandler('sphere_puckle', 'mouseleave', function (mesh) {
+  mesh.material.opacity = 0;
+});
+
+// Bytel
+mmi.addHandler('cube_data_center', 'click', function (mesh) {
+  document.getElementById('mobile_tinsel_sound').play();
+  openModal(document.querySelector('#modal'), 'bytel');
+});
+mmi.addHandler('cube_data_center', 'mouseenter', function (mesh) {
+  mesh.material.opacity = 0.4;
+});
+mmi.addHandler('cube_data_center', 'mouseleave', function (mesh) {
+  mesh.material.opacity = 0;
+});
+
+// Vg
+mmi.addHandler('vg', 'click', function (mesh) {
+  document.getElementById('mobile_tinsel_sound').play();
+  openModal(document.querySelector('#modal'), 'vg');
+});
+mmi.addHandler('vg', 'mouseenter', function (mesh) {
+  mesh.material.opacity = 0.4;
+});
+mmi.addHandler('vg', 'mouseleave', function (mesh) {
   mesh.material.opacity = 0;
 });
 
