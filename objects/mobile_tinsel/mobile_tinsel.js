@@ -1,59 +1,59 @@
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import * as THREE from 'three'
-import {group, manager} from '../../main.js'
+import * as THREE from 'three';
+import { group, manager } from '../../main.js';
 
-let loader = new GLTFLoader(manager);
+const loader = new GLTFLoader(manager);
 
-let pcb, led_light, cube_mobile_tinsel
+let pcb, ledLight, cubeMobileTinsel;
 
-loader.load('./objects/mobile_tinsel/low_poly_circuit_board_pcb.glb', function ( gltf ) {
-    pcb = gltf.scene;  // pcb 3D object is loaded
-    pcb.scale.set(1,1,1);
-    let i=3
-    let l=10
-    const phi = Math.acos( - 1 + ( 2 * i ) / l );
-    const theta = Math.sqrt( l * Math.PI ) * phi;
-    pcb.position.setFromSphericalCoords( 10.01, phi, theta );
-    const vector = new THREE.Vector3();
-    vector.copy( pcb.position ).multiplyScalar( 2 );
-    var direction = new THREE.Vector3( 0, 90, 0 ).applyQuaternion( pcb.quaternion );
-    pcb.lookAt( direction );
-    pcb.rotation.y = -0.5;
-      group.add(pcb);
-    const light = new THREE.HemisphereLight();
-    group.add( light );
-  }, undefined, function ( error ) {
-      console.error( error );
-  } );
-loader.load('./objects/mobile_tinsel/led_light.glb', function ( gltf ) {
-  led_light = gltf.scene;  // led_light 3D object is loaded
-  led_light.scale.set(0.3,0.3,0.3);
-  let i=3.15
-  let l=10
-  const phi = Math.acos( - 1 + ( 2 * i ) / l );
-  const theta = Math.sqrt( l * Math.PI ) * phi;
-  led_light.position.setFromSphericalCoords( 11.5, phi, theta );
+loader.load('./objects/mobile_tinsel/low_poly_circuit_board_pcb.glb', function (gltf) {
+  pcb = gltf.scene; // pcb 3D object is loaded
+  pcb.scale.set(1, 1, 1);
+  const i = 3;
+  const l = 10;
+  const phi = Math.acos(-1 + (2 * i) / l);
+  const theta = Math.sqrt(l * Math.PI) * phi;
+  pcb.position.setFromSphericalCoords(10.01, phi, theta);
   const vector = new THREE.Vector3();
-  vector.copy( led_light.position ).multiplyScalar( 2 );
-  var direction = new THREE.Vector3( 0, 90, 0 ).applyQuaternion( led_light.quaternion );
-  led_light.lookAt( direction );
-  led_light.rotation.y = -0.5;
-  group.add(led_light);
+  vector.copy(pcb.position).multiplyScalar(2);
+  const direction = new THREE.Vector3(0, 90, 0).applyQuaternion(pcb.quaternion);
+  pcb.lookAt(direction);
+  pcb.rotation.y = -0.5;
+  group.add(pcb);
   const light = new THREE.HemisphereLight();
-  group.add( light );
+  group.add(light);
+}, undefined, function (error) {
+  console.error(error);
+});
+loader.load('./objects/mobile_tinsel/led_light.glb', function (gltf) {
+  ledLight = gltf.scene; // ledLight 3D object is loaded
+  ledLight.scale.set(0.3, 0.3, 0.3);
+  const i = 3.15;
+  const l = 10;
+  const phi = Math.acos(-1 + (2 * i) / l);
+  const theta = Math.sqrt(l * Math.PI) * phi;
+  ledLight.position.setFromSphericalCoords(11.5, phi, theta);
+  const vector = new THREE.Vector3();
+  vector.copy(ledLight.position).multiplyScalar(2);
+  const direction = new THREE.Vector3(0, 90, 0).applyQuaternion(ledLight.quaternion);
+  ledLight.lookAt(direction);
+  ledLight.rotation.y = -0.5;
+  group.add(ledLight);
+  const light = new THREE.HemisphereLight();
+  group.add(light);
 
-  const geometry1 = new THREE.BoxGeometry( 5, 2.5, 5 );
+  const geometry1 = new THREE.BoxGeometry(5, 2.5, 5);
   const materials = new THREE.MeshBasicMaterial({
-  color: 'red',
-  transparent: true,
-  opacity: 0
+    color: 'red',
+    transparent: true,
+    opacity: 0
   });
-  cube_mobile_tinsel = new THREE.Mesh( geometry1, materials );
-  cube_mobile_tinsel.name = "cube_mobile_tinsel";
-  cube_mobile_tinsel.position.set(pcb.position.x, pcb.position.y, pcb.position.z-0.6);
-  cube_mobile_tinsel.lookAt( direction );
-  cube_mobile_tinsel.rotation.y = -0.5;
-  group.add( cube_mobile_tinsel );
-}, undefined, function ( error ) {
-    console.error( error );
-} );
+  cubeMobileTinsel = new THREE.Mesh(geometry1, materials);
+  cubeMobileTinsel.name = 'cube_mobile_tinsel';
+  cubeMobileTinsel.position.set(pcb.position.x, pcb.position.y, pcb.position.z - 0.6);
+  cubeMobileTinsel.lookAt(direction);
+  cubeMobileTinsel.rotation.y = -0.5;
+  group.add(cubeMobileTinsel);
+}, undefined, function (error) {
+  console.error(error);
+});

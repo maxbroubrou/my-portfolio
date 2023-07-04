@@ -1,16 +1,16 @@
 // const openModalButtons = document.querySelectorAll('[data-modal-target]')
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay')
 import data from './data.json';
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay');
 
-let title = document.getElementById('title');
-let subtitle = document.getElementById('subtitle');
-let date = document.getElementById('date');
-let description = document.getElementById('description');
-let project_image = document.getElementById('project_image');
-let project_link = document.getElementById('project_link');
-let github_link = document.getElementById('github_link');
-let credits = document.getElementById('credits');
+const title = document.getElementById('title');
+const subtitle = document.getElementById('subtitle');
+const date = document.getElementById('date');
+const description = document.getElementById('description');
+const projectImage = document.getElementById('project_image');
+const projectLink = document.getElementById('project_link');
+const githubLink = document.getElementById('github_link');
+const credits = document.getElementById('credits');
 
 let opened = false;
 
@@ -23,68 +23,64 @@ let opened = false;
 // })
 
 overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.modal.active')
+  const modals = document.querySelectorAll('.modal.active');
   modals.forEach(modal => {
-    closeModal(modal)
-  })
-})
+    closeModal(modal);
+  });
+});
 
 closeModalButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const modal = button.closest('.modal')
-    closeModal(modal)
-  })
-})
+    const modal = button.closest('.modal');
+    closeModal(modal);
+  });
+});
 
-function openModal(modal, project) {
-  if (modal == null) return
-  modal.scrollTo(0,0);
+function openModal (modal, project) {
+  if (modal == null) return;
+  modal.scrollTo(0, 0);
   title.textContent = data[project].title;
   subtitle.textContent = data[project].subtitle;
   date.textContent = data[project].date;
   description.textContent = data[project].description;
-  project_image.src = data[project].project_image;
-  if (data[project].project_link == "") {
-    project_link.style.display = "none";
+  projectImage.src = data[project].project_image;
+  if (data[project].project_link === '') {
+    projectLink.style.display = 'none';
+  } else {
+    projectLink.style.display = '';
   }
-  else
-  {
-    project_link.style.display = "";
+  projectLink.href = data[project].project_link;
+  if (data[project].github_link === '') {
+    githubLink.style.display = 'none';
+  } else {
+    githubLink.style.display = '';
   }
-  project_link.href = data[project].project_link;
-  if (data[project].github_link == "") {
-    github_link.style.display = "none";
-  }
-  else
-  {
-    github_link.style.display = "";
-  }
-  github_link.href = data[project].github_link;
+  githubLink.href = data[project].github_link;
   credits.textContent = data[project].credits;
 
-  modal.classList.add('active')
-  overlay.classList.add('active')
+  modal.classList.add('active');
+  overlay.classList.add('active');
 
   opened = true;
 }
 
-function closeModal(modal) {
-  if (modal == null) return
-  modal.classList.remove('active')
-  overlay.classList.remove('active')
+function closeModal (modal) {
+  if (modal == null) return;
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
   opened = false;
 }
 
 const pressEsc = (event) => {
-	if(event.key === "Escape" && opened) {
-        const modals = document.querySelectorAll('.modal.active')
-        modals.forEach(modal => {
-        closeModal(modal)
-  })
-    }
-}
+  if (event.key === 'Escape' && opened) {
+    const modals = document.querySelectorAll('.modal.active');
+    modals.forEach(modal => {
+      closeModal(modal);
+    });
+  }
+};
 
-window.addEventListener("keydown", pressEsc)
+window.addEventListener('keydown', pressEsc);
 
 // export { openModalButtons, closeModalButtons, overlay, openModal, closeModal };
 export { closeModalButtons, overlay, openModal, closeModal };
