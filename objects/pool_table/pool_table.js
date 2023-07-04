@@ -1,8 +1,8 @@
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import * as THREE from 'three'
-import {group} from '../../main.js'
+import {group, manager} from '../../main.js'
 
-var loader = new GLTFLoader();
+var loader = new GLTFLoader(manager);
 
 let pool_table, cube_pool_table
 

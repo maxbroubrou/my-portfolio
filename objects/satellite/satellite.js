@@ -1,8 +1,8 @@
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import * as THREE from 'three'
-import {group, satelliteGroup} from '../../main.js'
+import {group, manager, satelliteGroup} from '../../main.js'
 
-var loader = new GLTFLoader();
+var loader = new GLTFLoader(manager);
 
 let satellite, antenna, cube_antenna, sphere_satellite
 

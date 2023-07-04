@@ -1,8 +1,8 @@
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import * as THREE from 'three'
-import {group} from '../../main.js'
+import {group, manager} from '../../main.js'
 
-var loader = new GLTFLoader();
+let loader = new GLTFLoader(manager);
 
 let pcb, led_light, cube_mobile_tinsel
 

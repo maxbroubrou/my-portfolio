@@ -13,13 +13,31 @@ import {closeModalButtons, overlay, openModal, closeModal} from './modal_control
 // import {description_area_onWindowResize} from './description_area.js'
 // import { CanvasUI } from '/jsm/CanvasUI.js';
 // import ThreeMeshUI from 'three-mesh-ui'
+var manager = new THREE.LoadingManager();
+manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
+	console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+};
+
+manager.onLoad = function () {
+	console.log( 'Loading complete!');
+};
+
+
+manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
+	console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+};
+
+manager.onError = function ( url ) {
+	console.log( 'There was an error loading ' + url );
+};
 
 
 // Initialize scene and camera
+
 const scene  = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight,0.1,1000);
 const renderer = new THREE.WebGLRenderer({
- canvas: document.querySelector('#planet'),
+canvas: document.querySelector('#planet'),
   antialias: true,
 });
 renderer.setPixelRatio( window.devicePixelRatio);
@@ -239,4 +257,4 @@ function animate() {
 
 animate();
 
-export {group, satelliteGroup};
+export {group, satelliteGroup, manager};
