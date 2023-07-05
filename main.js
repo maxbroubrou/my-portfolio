@@ -176,7 +176,7 @@ mmi.addHandler('cube_data_center', 'mouseleave', function (mesh) {
 
 // Vg
 mmi.addHandler('vg', 'click', function (mesh) {
-  document.getElementById('mobile_tinsel_sound').play();
+  document.getElementById('smart_lock_sound').play();
   openModal(document.querySelector('#modal'), 'vg');
 });
 mmi.addHandler('vg', 'mouseenter', function (mesh) {
